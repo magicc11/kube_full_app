@@ -1,15 +1,15 @@
-apiVersion: V1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
     name: redis-deployment
     labels:
-      app: redis
+      app: demo-voting-app
 spec:
    replicas: 1
    selector:
        matchLabels:
             name: redis-pod
-            app:  demo-voting-app
+            app: demo-voting-app
    template:
        metadata:
             name: redis-pod
